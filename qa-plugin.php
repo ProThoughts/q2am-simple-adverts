@@ -2,7 +2,7 @@
 
 /*
 	Plugin Name: Q2AM Simple Adverts
-	Plugin URI: http://www.q2amarket.com/market/q2am-simple-adverts/
+	Plugin URI: http://www.q2amarket.com/market/q2am-simple-adverts-plugin/
 	Plugin Update Check URI: https://github.com/q2amarket/q2am-simple-adverts/raw/master/qa-plugin.php
 	Plugin Description: Add recent questions widget on sidebar or template area
 	Plugin Version: 1.0
