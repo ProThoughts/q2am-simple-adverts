@@ -1,6 +1,6 @@
 SIMPLE ADVERTS
 ==============
-VERSION 1.0
+VERSION 1.1
 -----------
 
 This plugin will allow to add image advert, google adsense or HTML after every nth question in list all list views.

@@ -6,7 +6,7 @@
 *	
 *	@author			Q2A Market
 *	@category		Plugin
-*	@Version: 		1.0
+*	@Version: 		1.1
 *	
 *	@Q2A Version	1.5.3
 *

@@ -6,7 +6,7 @@
 *	
 *	@author			Q2A Market
 *	@category		Plugin
-*	@Version: 		1.0
+*	@Version: 		1.1
 *	
 *	@Q2A Version	1.5.2
 *
@@ -48,7 +48,7 @@ class qa_html_theme_layer extends qa_html_theme_base {
                         
                         $link = qa_opt('q2am_advert_destination_link');
                         
-                        $this->output('<div class="q2am-advert">');
+                        $this->output('<div class="qa-q-list-item q2am-advert">');
                         
                         if (qa_opt('q2am_google_adsense')) {
                             
