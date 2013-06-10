@@ -45,8 +45,7 @@ class qa_adverts {
 		$ok = null;
 		if (qa_clicked('np_q_save_button')) {
 			
-			qa_opt('q2am_enable_adverts',(bool)qa_post_text('q2am_enable_adverts'));
-            
+			qa_opt('q2am_enable_adverts',(bool)qa_post_text('q2am_enable_adverts'));            
             qa_opt('q2am_image_advert',(bool)qa_post_text('q2am_image_advert'));			
 			qa_opt('advert_image_url', qa_post_text('q2am_advert_image_url'));
 			qa_opt('advert_destination_link', qa_post_text('q2am_advert_destination_link'));
