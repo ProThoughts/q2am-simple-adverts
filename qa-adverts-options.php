@@ -30,12 +30,6 @@ class qa_adverts {
             case 'q2am_image_advert':
                 return true;
             
-			case 'q2am_advert_image_url':
-				return 'http://demo.q2amarket.com/qa-theme/elegant-responsive/images/468-advert.jpg';
-                
-            case 'q2am_advert_destination_link':
-				return 'http://www.q2amarket.com';
-            
             case 'q2am_after_every':
                 return 5;
                 
