@@ -1,6 +1,6 @@
 SIMPLE ADVERTS
 ==============
-VERSION 1.1
+VERSION 1.2
 -----------
 
 This plugin will allow to add image advert, google adsense or HTML after every nth question in list all list views.
@@ -11,11 +11,12 @@ Features
 - Add google adsense
 - Add HTML markup advert
 - Control every nth iteration
+- Add image adver to any template page (new)
 
 Installation Guide
 ------------------
 1. Extrat zip file.
-2. Place directory called "q2am-simple-adverts" in qa-plugin folder.
+2. Place directory called `q2am-simple-adverts` in qa-plugin folder.
 3. Done
 
 Usage Guide
@@ -61,9 +62,29 @@ Will save all changes.
 ##### Reset to Defaults
 Will discard all changes and reset to default settings.
 
-Change Logs
+Hook
+====
+For page template advert by default it will only add image advert below to the page heading. However it is very easy to move it to anywhere else you like, also can add on multiple places on the page.
+
+Place below method in your theme or directly modify `qa-adverts-layer.php`
+````php
+$this->page_advert(); // just place it to display page image advert
+````
+
+Change Logs V1.2
 ===========
-- First version
+- Fixed image advert issue
+- Added page template advert below page heading
+    - Home
+    - Activity
+    - Questions
+    - Question
+    - Categories
+    - Tags
+    - Users
+    - Admin
+    - Ask
+
 
 About Question2Answer
 =====================
@@ -73,7 +94,23 @@ About Q2A Market
 ================
 [Q2A Market ][author]is the leading developer for Question2Answer open source system. It is providing high quality theme, plugins and customization service.
 
-Find out more for [Q2A Market][author]
+---
+Find out more for [Q2A Market][author]  
+Premium and free themes and plugins on [Q2A Market Store][store]  
+Watch all Q2A Market product guide and free tutorials on [TV-Q2A Market][tv]
+
+---
+
+Follow Us
+=========
+####[Facebook][fb]  
+####[Twitter][twit]  
+####[Google Plus][gp]  
+####[Linkedin][ln]  
+####[Youtube][yt] 
+####[Vimeo][vm]
+####[Pinterest][pin]  
+####[Skype][skp]  
 
 
 Disclaimer
@@ -85,4 +122,14 @@ See the [GNU General Public License][GNU] for more details.
 [q2a_link]:http://www.question2answer.org
 [q2a_community]:http://www.question2answer.org/qa/
 [author]: http://www.q2amarket.com
+[tv]: http://tv.q2amarket.com
 [GNU]:http://www.gnu.org/licenses/gpl.html
+[store]:http://store.q2amarket.com
+[fb]: https://www.facebook.com/q2amarket
+[twit]: https://twitter.com/Q2AMarket
+[gp]: https://plus.google.com/101360115965915958175/about
+[ln]: http://www.linkedin.com/in/q2amarket
+[yt]: http://www.youtube.com/user/q2amarket
+[pin]: http://pinterest.com/q2amarket/
+[vm]: https://vimeo.com/q2amarket
+[skp]: http://myskype.info/q2amarket
