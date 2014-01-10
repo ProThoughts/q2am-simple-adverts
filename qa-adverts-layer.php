@@ -6,9 +6,9 @@
 *	
 *	@author			Q2A Market
 *	@category		Plugin
-*	@Version: 		1.1
+*	@Version: 		1.2
 *	
-*	@Q2A Version	1.5.2
+*	@Q2A Version	1.6
 *
 *	Do not modify this file unless you know what you are doing
 */
@@ -29,6 +29,16 @@ class qa_html_theme_layer extends qa_html_theme_base {
                     max-width:100%;
                     height:auto;
                 }
+                .qa-main h1:first-of-type{
+                    margin-bottom: 5px
+                }
+                .q2am-page-advert{
+                    margin-bottom: 5px
+                }
+                .q2am-page-advert img{
+                    max-width: 100%;
+                    height: auto;
+                }
             </style>
         
         ');
@@ -36,8 +46,9 @@ class qa_html_theme_layer extends qa_html_theme_base {
 
     function q_list($q_list) 
     {
+        $template = qa_request() == '' ? 'home' : qa_request_part(0);
         
-       if (qa_opt('q2am_enable_adverts')) {
+        if (qa_opt('q2am_enable_adverts')) {
         
             if (isset($q_list['qs'])) { 
                 $this->output('<DIV CLASS="qa-q-list">', ''); 
@@ -48,7 +59,7 @@ class qa_html_theme_layer extends qa_html_theme_base {
                         
                         $link = qa_opt('q2am_advert_destination_link');
                         
-                        $this->output('<div class="qa-q-list-item q2am-advert">');
+                        $this->output('<div class="qa-q-list-item '.$template.'">');
                         
                         if (qa_opt('q2am_google_adsense')) {
                             
@@ -57,7 +68,7 @@ class qa_html_theme_layer extends qa_html_theme_base {
                         } elseif (qa_opt('q2am_image_advert')) {                            
 
                             $this->output('<a href="'.qa_opt('q2am_advert_destination_link').'" >');                            
-                            $this->output('<img src="'.qa_opt('q2am_advert_image_url').'" alt="advert" />');
+                            $this->output('<img src="'.qa_opt('q2am_advert_image_url').'" alt="q2a-market-advert" />');
                             $this->output('</a>');
                         
                         }                        
@@ -78,6 +89,38 @@ class qa_html_theme_layer extends qa_html_theme_base {
          
     }
 
+
+    function page_title_error()
+    {
+        qa_html_theme_base::page_title_error();
+        $this->page_advert();
+    }
+
+
+
+    function page_advert()
+    {
+
+        $template = qa_request() == '' ? 'home' : qa_request_part(0);
+        $advert = qa_opt('q2am_'.$template.'_advert_image_url');
+
+        if((qa_opt('q2am_'.$template.'_enable_adverts')) && (!empty($advert))) {
+
+            $html = '
+            <!-- Start Q2A Market page advert -->
+            <div class="q2am-page-advert '.$template.'">
+                <a href="'.qa_opt('q2am_'.$template.'_advert_destination_link').'" >
+                    <img src="'.qa_opt('q2am_'.$template.'_advert_image_url').'" alt="q2a-market-'.$template.'-advert" />
+                </a>
+            </div>
+            <!-- End Q2A Market page advert -->
+            ';
+
+            $this->output($html);
+
+        } //endif
+
+    }
 
 
 }
