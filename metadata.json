@@ -1,0 +1,13 @@
+{
+  "name": "Q2AM Simple Adverts",
+  "uri": "http://store.q2amarket.com/simple-advert/",
+  "description": "Add recent questions widget on sidebar or template area",
+  "version": "1.3",
+  "date": "2016-03-03",
+  "author": "Q2A Market",
+  "author_uri": "http://www.q2amarket.com",
+  "license": "GPLv3+",
+  "update_uri": "https://github.com/q2amarket/q2am-simple-adverts/raw/master/metadata.json",
+  "min_q2a": "1.7",
+  "min_php": "5.3"
+}
