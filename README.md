@@ -1,8 +1,7 @@
 SIMPLE ADVERTS
 ==============
-VERSION 1.2
+VERSION 1.3
 -----------
-
 This plugin will allow to add image advert, google adsense or HTML after every nth question in list all list views.
 
 Features
@@ -71,8 +70,17 @@ Place below method in your theme or directly modify `qa-adverts-layer.php`
 $this->page_advert(); // just place it to display page image advert
 ````
 
+Change Logs V1.3
+================
+- Fixed reported [option bloat][v1.2github-issue] issue
+- Added more page template advert below page heading
+    - Ask
+    - User
+    - Question
+
+
 Change Logs V1.2
-===========
+================
 - Fixed image advert issue
 - Added page template advert below page heading
     - Home
@@ -133,3 +141,4 @@ See the [GNU General Public License][GNU] for more details.
 [pin]: http://pinterest.com/q2amarket/
 [vm]: https://vimeo.com/q2amarket
 [skp]: http://myskype.info/q2amarket
+[v1.2github-issue]: https://github.com/q2amarket/q2am-simple-adverts/issues/3
