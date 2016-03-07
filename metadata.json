@@ -7,7 +7,7 @@
   "author": "Q2A Market",
   "author_uri": "http://www.q2amarket.com",
   "license": "GPLv3+",
-  "update_uri": "https://github.com/q2amarket/q2am-simple-adverts/raw/master/metadata.json",
+  "update_uri": "https://raw.githubusercontent.com/q2amarket/q2am-simple-adverts/master/metadata.json",
   "min_q2a": "1.7",
   "min_php": "5.3"
 }
