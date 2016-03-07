@@ -57,7 +57,7 @@ class qa_html_theme_layer extends qa_html_theme_base
      */
     function q_list( $q_list )
     {
-        $template = $this->template = 'qa' ? 'home' : $this->template;
+        $template = ($this->template == 'qa') ? 'home' : $this->template;
 
         if ( qa_opt( 'q2am_enable_adverts' ) ) {
 
@@ -115,7 +115,7 @@ class qa_html_theme_layer extends qa_html_theme_base
      */
     function page_advert()
     {
-        $template = $this->template = 'qa' ? 'home' : $this->template;
+        $template = ($this->template == 'qa') ? 'home' : $this->template;
         $advert   = qa_opt( 'q2am_' . $template . '_advert_image_url' );
 
         if ( ( qa_opt( 'q2am_' . $template . '_enable_adverts' ) ) && ( !empty( $advert ) ) ) {

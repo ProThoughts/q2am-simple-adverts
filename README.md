@@ -1,7 +1,7 @@
 SIMPLE ADVERTS
 ==============
-VERSION 1.3
------------
+VERSION 1.3.1
+-------------
 This plugin will allow to add image advert, google adsense or HTML after every nth question in list all list views.
 
 Features
@@ -69,6 +69,10 @@ Place below method in your theme or directly modify `qa-adverts-layer.php`
 ````php
 $this->page_advert(); // just place it to display page image advert
 ````
+
+Change Logs V1.3.1
+==================
+- Fixed enable-disable ***conditional*** statement issue
 
 Change Logs V1.3
 ================

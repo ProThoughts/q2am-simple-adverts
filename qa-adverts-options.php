@@ -23,7 +23,7 @@ class qa_adverts
     function __construct()
     {
         $this->page_template = [
-            'qa',
+            'home',
             'activity',
             'questions',
             'question',
