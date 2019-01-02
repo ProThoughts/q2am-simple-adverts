@@ -26,28 +26,26 @@ class qa_html_theme_layer extends qa_html_theme_base
 	{
 		parent::head_custom();
 		$this->output('
-        
-            <style>
-                div.q2am-advert{
-                    width:100%;
-                    text-align:center;
-                }
-                div.q2am-advert img{
-                    max-width:100%;
-                    height:auto;
-                }
-                .qa-main h1:first-of-type{
-                    margin-bottom: 5px
-                }
-                .q2am-page-advert{
-                    margin-bottom: 5px
-                }
-                .q2am-page-advert img{
-                    max-width: 100%;
-                    height: auto;
-                }
-            </style>
-        
+<style>
+	div.q2am-advert{
+		width:100%;
+		text-align:center;
+	}
+	div.q2am-advert img{
+		max-width:100%;
+		height:auto;
+	}
+	.qa-main h1:first-of-type{
+		margin-bottom: 5px
+	}
+	.q2am-page-advert{
+		margin-bottom: 5px
+	}
+	.q2am-page-advert img{
+		max-width: 100%;
+		height: auto;
+	}
+</style>
         ');
 	}
 
@@ -67,14 +65,10 @@ class qa_html_theme_layer extends qa_html_theme_base
 				foreach ($q_list['qs'] as $q_item) {
 					$this->q_list_item($q_item);
 					if ($count % qa_opt('q2am_after_every') == 0) {
-
 						$this->output('<div class="qa-q-list-item ' . $template . '">');
-
 						if (qa_opt('q2am_google_adsense')) {
-
 							$this->output(qa_opt('q2am_google_adsense_codebox'));
 						} elseif (qa_opt('q2am_image_advert')) {
-
 							$this->output('<a href="' . qa_opt('q2am_advert_destination_link') . '" >');
 							$this->output('<img src="' . qa_opt('q2am_advert_image_url') . '" alt="q2a-market-advert" />');
 							$this->output('</a>');
@@ -88,7 +82,7 @@ class qa_html_theme_layer extends qa_html_theme_base
 			}
 		} else {
 
-			qa_html_theme_base::q_list($q_list);
+			parent::q_list($q_list);
 		}
 	}
 
@@ -97,13 +91,12 @@ class qa_html_theme_layer extends qa_html_theme_base
 	 */
 	function page_title_error()
 	{
-		qa_html_theme_base::page_title_error();
+		parent::page_title_error();
 		$this->page_advert();
 	}
 
 	/**
 	 * This method will populate advert dynamically based on set option for the plugin
-	 *
 	 */
 	function page_advert()
 	{
@@ -111,20 +104,15 @@ class qa_html_theme_layer extends qa_html_theme_base
 		$advert = qa_opt('q2am_' . $template . '_advert_image_url');
 
 		if ((qa_opt('q2am_' . $template . '_enable_adverts')) && (!empty($advert))) {
-
 			$html = '
-            <!-- Start Q2A Market page advert -->
-            <div class="q2am-page-advert ' . $template . '">
-                <a href="' . qa_opt('q2am_' . $template . '_advert_destination_link') . '" >
-                    <img src="' . qa_opt('q2am_' . $template . '_advert_image_url') . '" alt="q2a-market-' . $template . '-advert" />
-                </a>
-            </div>
-            <!-- End Q2A Market page advert -->
+<div class="q2am-page-advert ' . $template . '">
+	<a href="' . qa_opt('q2am_' . $template . '_advert_destination_link') . '" >
+		<img src="' . qa_opt('q2am_' . $template . '_advert_image_url') . '" alt="q2a-market-' . $template . '-advert" />
+	</a>
+</div>
             ';
 
 			$this->output($html);
-		} //endif
-
+		}
 	}
-
 }
